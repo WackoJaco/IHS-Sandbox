@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>FFX_Letterhead</letterhead>
+    <name>PSA New Project Template</name>
+    <style>freeForm</style>
+    <subject>PSA - New Project Template!</subject>
+    <textOnly>A new project template is created and now available for use!
+
+Project:
+{!pse__Proj__c.Name}
+{!pse__Proj__c.Link}
+
+You can select the Project Name from the list of templates the next time you create a project.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

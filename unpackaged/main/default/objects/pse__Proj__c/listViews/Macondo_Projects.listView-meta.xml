@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Macondo_Projects</fullName>
+    <columns>RECORDTYPE</columns>
+    <columns>NAME</columns>
+    <columns>pse__Billing_Type__c</columns>
+    <columns>pse__Project_Manager__c</columns>
+    <columns>Director__c</columns>
+    <columns>pse__Region__c</columns>
+    <columns>pse__Practice__c</columns>
+    <columns>pse__Is_Billable__c</columns>
+    <columns>pse__Is_Active__c</columns>
+    <columns>pse__Include_In_Forecasting__c</columns>
+    <columns>pse__Recognition_Method__c</columns>
+    <columns>Pipeline_Stage__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>pse__Region__c</field>
+        <operation>equals</operation>
+        <value>Macondo</value>
+    </filters>
+    <label>Macondo Projects</label>
+</ListView>

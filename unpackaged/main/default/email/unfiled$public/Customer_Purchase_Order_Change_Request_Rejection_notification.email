@@ -1,0 +1,8 @@
+Dear {!pse__Budget__c.OwnerId},
+
+
+Your Customer Purchase Order Change Request has been rejected.
+
+The record has been unlocked for editing. 
+
+To view the record, click the following link: {!pse__Budget__c.Link}

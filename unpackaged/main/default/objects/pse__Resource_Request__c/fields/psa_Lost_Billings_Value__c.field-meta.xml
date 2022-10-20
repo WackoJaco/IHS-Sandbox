@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>psa_Lost_Billings_Value__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+				OR(pse__Project__r.pse__Is_Billable__c &lt;&gt; TRUE,
+							TEXT(pse__Project__r.pse__Billing_Type__c) = 'Fixed Price'),
+							NULLVALUE(pse__Rate_Card__r.pse__Suggested_Bill_Rate__c,0)  *  NULLVALUE(pse__SOW_Hours__c,0), 0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>If the Resource Request is non-billable this field displays the sum of Suggested Bill Rate (divided by 8 hours) multiplied by the Requested Hours for this Resource Request.</inlineHelpText>
+    <label>Lost Billings Value</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

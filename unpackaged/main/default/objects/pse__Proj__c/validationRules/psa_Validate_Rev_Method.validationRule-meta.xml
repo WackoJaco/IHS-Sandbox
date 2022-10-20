@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>psa_Validate_Rev_Method</fullName>
+    <active>false</active>
+    <description>Ensure revenue method is set when the project is included in forecasting.</description>
+    <errorConditionFormula>AND(ISBLANK(TEXT(pse__Recognition_Method__c)), pse__Include_In_Forecasting__c = true)</errorConditionFormula>
+    <errorDisplayField>pse__Recognition_Method__c</errorDisplayField>
+    <errorMessage>Please select a Recognition Method for this Project to be included in Forecasting.</errorMessage>
+</ValidationRule>

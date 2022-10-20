@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Change_Request_Type__c</fullName>
+    <description>This custom field will be used for Budget approval purposes.</description>
+    <externalId>false</externalId>
+    <label>Change Request Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Client Credit - fee waiver</fullName>
+                <default>false</default>
+                <label>Client Credit - fee waiver</label>
+            </value>
+            <value>
+                <fullName>Fixed Price Overage</fullName>
+                <default>false</default>
+                <label>Fixed Price Overage</label>
+            </value>
+            <value>
+                <fullName>Non Chargeable client work (FOC)</fullName>
+                <default>false</default>
+                <label>Non Chargeable client work (FOC)</label>
+            </value>
+            <value>
+                <fullName>Proposal and SOW</fullName>
+                <default>true</default>
+                <label>Proposal and SOW</label>
+            </value>
+            <value>
+                <fullName>Service Credit against License</fullName>
+                <default>false</default>
+                <label>Service Credit against License</label>
+            </value>
+            <value>
+                <fullName>Client Credit - incorrect Billing</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Client Credit - incorrect Billing</label>
+            </value>
+            <value>
+                <fullName>Hosting - Change Management Credit/ Training Credits being repurposed.</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Hosting - Change Management Credit/ Training Credits being repurposed.</label>
+            </value>
+            <value>
+                <fullName>Internal project resourcing (projects outside of EDM/TF)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Internal project resourcing (projects outside of EDM/TF)</label>
+            </value>
+            <value>
+                <fullName>Rate Discount</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Rate Discount</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

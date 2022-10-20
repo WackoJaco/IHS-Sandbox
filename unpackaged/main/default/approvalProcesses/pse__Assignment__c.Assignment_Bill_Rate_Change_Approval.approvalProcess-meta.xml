@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <allowRecall>false</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Owner</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>smodi@financialforce.com.ihs</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <label>Discount Approval</label>
+        <name>Discount_Approval</name>
+    </approvalStep>
+    <description>If the Bill Rate is lower than the Suggested Bill Rate send to the Regional Lead for Approval</description>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <formula>pse__Is_Billable__c = TRUE  &amp;&amp;  
+	pse__Bill_Rate__c &lt; pse__Suggested_Bill_Rate_Number__c</formula>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>Discount_Approved_Update</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Status_to_Scheduled</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Set_Bill_Rate</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Status_to_Tentative</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Status_to_Pending_Approval</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Assignment Bill Rate Change Approval</label>
+    <processOrder>1</processOrder>
+    <recordEditability>AdminOnly</recordEditability>
+    <showApprovalHistory>false</showApprovalHistory>
+</ApprovalProcess>

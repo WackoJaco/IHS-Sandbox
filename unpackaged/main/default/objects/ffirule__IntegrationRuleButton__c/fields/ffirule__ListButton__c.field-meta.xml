@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ffirule__ListButton__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>IF( OR(ffirule__ListObject__c==null,ffirule__ListObject__c == '' ) ,
+
+'&lt;apex:page standardController="' + ffirule__IntegrationRule__r.ffirule__SourceObject__c + '" extensions="ffirule.IntegrationRuleEngine" action="'+'{'+'!'+'convert'+'}'+'" recordSetVar="records" lightningStylesheets="true"&gt;' + BR() +'&lt;ffirule:IntegrationRule engine="'+'{'+'!'+'engine'+'}'+'"/&gt;'+ BR() +'&lt;/apex:page&gt;',
+
+'&lt;apex:page standardController="' + ffirule__ListObject__c + '" extensions="ffirule.IntegrationRuleEngine" action="'+'{'+'!'+'convert'+'}'+'" recordSetVar="records" lightningStylesheets="true"&gt;' + BR() +'&lt;ffirule:IntegrationRule engine="'+'{'+'!'+'engine'+'}'+'"/&gt;'+ BR() +'&lt;/apex:page&gt;')</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>List Button</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

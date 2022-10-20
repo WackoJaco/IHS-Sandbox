@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>pse__Opp_RR_Fieldset__c</fullName>
+    <defaultValue>'CreateProjectOpportunityRRColumns'</defaultValue>
+    <deprecated>false</deprecated>
+    <description>The API name of a field set used by the Resource Request object. This field set defines the resource requests from opportunity columns displayed when creating a project from an opportunity.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>API name of a field set used by the Resource Request object. Fields in this set define the columns in Resource Request Mappings from Opportunity on the Create Project from Template page.</inlineHelpText>
+    <label>Resource Request from Opp Read Only</label>
+    <length>100</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

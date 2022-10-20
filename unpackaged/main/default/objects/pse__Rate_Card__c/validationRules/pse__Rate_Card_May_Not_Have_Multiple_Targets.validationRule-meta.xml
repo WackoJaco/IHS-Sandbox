@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>pse__Rate_Card_May_Not_Have_Multiple_Targets</fullName>
+    <active>true</active>
+    <description>Rate Card must not reference more than one of the following: Account, Region, Practice, Group.</description>
+    <errorConditionFormula>OR(AND(NOT(OR(ISNULL(pse__Account__c),(pse__Account__c=''))),NOT(AND(OR(ISNULL(pse__Region__c),(pse__Region__c='')),OR(ISNULL(pse__Practice__c),(pse__Practice__c='')),OR(ISNULL(pse__Group__c),(pse__Group__c=''))))),AND(NOT(OR(ISNULL(pse__Region__c),(pse__Region__c=''))),NOT(AND(OR(ISNULL(pse__Account__c),(pse__Account__c='')),OR(ISNULL(pse__Practice__c),(pse__Practice__c='')),OR(ISNULL(pse__Group__c),(pse__Group__c=''))))),AND(NOT(OR(ISNULL(pse__Practice__c),(pse__Practice__c=''))),NOT(AND(OR(ISNULL(pse__Region__c),(pse__Region__c='')),OR(ISNULL(pse__Account__c),(pse__Account__c='')),OR(ISNULL(pse__Group__c),(pse__Group__c=''))))),AND(NOT(OR(ISNULL(pse__Group__c),(pse__Group__c=''))),NOT(AND(OR(ISNULL(pse__Region__c),(pse__Region__c='')),OR(ISNULL(pse__Practice__c),(pse__Practice__c='')),OR(ISNULL(pse__Account__c),(pse__Account__c=''))))))</errorConditionFormula>
+    <errorMessage>Rate Card must not reference more than one of the following: Account, Region, Practice, Group.</errorMessage>
+</ValidationRule>

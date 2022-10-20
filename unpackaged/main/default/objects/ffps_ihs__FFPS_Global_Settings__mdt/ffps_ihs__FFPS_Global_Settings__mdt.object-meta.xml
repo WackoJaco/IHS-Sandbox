@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Global settings for the FinancialForce extension package.</description>
+    <label>FFPS Global Settings</label>
+    <pluralLabel>FFPS Global Settings</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

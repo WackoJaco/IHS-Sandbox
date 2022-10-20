@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Configure custom mappings for Task-Based Resourcing.</description>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>process</name>
+                    <value>pse__RFPTMappingProcess</value>
+                </componentInstanceProperties>
+                <componentName>fferpcore:mappings</componentName>
+                <identifier>fferpcore_mappings</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>process</name>
+                    <value>pse__RFPTAssignmentMappingProcess</value>
+                </componentInstanceProperties>
+                <componentName>fferpcore:mappings</componentName>
+                <identifier>fferpcore_mappings2</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>main</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <masterLabel>Task-Based Resourcing Mappings</masterLabel>
+    <template>
+        <name>flexipage:defaultAppHomeTemplate</name>
+    </template>
+    <type>AppPage</type>
+</FlexiPage>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>FFX_Letterhead</letterhead>
+    <name>PSA Outstanding Expenses</name>
+    <style>freeForm</style>
+    <subject>Please submit your expense for {!pse__Expense__c.pse__Project__c}</subject>
+    <textOnly>Hi, {!pse__Expense__c.pse__Resource__c}
+
+Please submit your expense for project:
+{!pse__Expense__c.pse__Project__c}
+
+Expense:
+{!pse__Expense__c.Link}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>FFX_Letterhead</letterhead>
+    <name>PSA Expense Report Rejected</name>
+    <style>freeForm</style>
+    <subject>Your Expense Report has been Rejected For Project - {!pse__Expense_Report__c.pse__Project__c} - With Expense Dates {!pse__Expense_Report__c.pse__First_Expense_Date__c} to {!pse__Expense_Report__c.pse__Last_Expense_Date__c}</subject>
+    <textOnly>Hi {!pse__Timecard_Header__c.pse__Resource__c}-
+
+Your Expense Report has been Rejected for:
+
+Project: {!pse__Expense_Report__c.pse__Project__c}
+First Expense Date: {!pse__Expense_Report__c.pse__First_Expense_Date__c}
+Last Expense Date: {!pse__Expense_Report__c.pse__Last_Expense_Date__c}
+Assignment: {!pse__Expense_Report__c.pse__Assignment__c}
+Milestone: {!pse__Expense_Report__c.pse__Milestone__c}
+Notes: {!pse__Expense_Report__c.pse__Audit_Notes__c}
+Total Reimbursement Amount: {!pse__Expense_Report__c.pse__Total_Reimbursement_Amount__c}
+
+Rejection Comments: {!ApprovalRequest.Comments}
+
+Please click the link below, fix any issues and Resubmit:
+{!pse__Expense_Report__c.Link}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

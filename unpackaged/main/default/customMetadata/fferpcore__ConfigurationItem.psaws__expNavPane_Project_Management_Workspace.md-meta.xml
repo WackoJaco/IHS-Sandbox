@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Project Management Workspace</label>
+    <protected>false</protected>
+    <values>
+        <field>fferpcore__Enabled__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>fferpcore__ItemKey__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>fferpcore__ItemType__c</field>
+        <value xsi:type="xsd:string">fferpcore__exp_navigationPane</value>
+    </values>
+    <values>
+        <field>fferpcore__LargeData__c</field>
+        <value xsi:type="xsd:string">[{&quot;text&quot;:&quot;Frequent Tasks&quot;,&quot;items&quot;:[{&quot;icon&quot;:{&quot;namespace&quot;:&quot;pse&quot;,&quot;fileName&quot;:&quot;psa_project&quot;},&quot;text&quot;:&quot;Projects&quot;,&quot;items&quot;:[{&quot;text&quot;:&quot;Projects&quot;,&quot;pageRef&quot;:{&quot;type&quot;:&quot;standard__objectPage&quot;,&quot;attributes&quot;:{&quot;objectApiName&quot;:&quot;pse__Proj__c&quot;,&quot;actionName&quot;:&quot;home&quot;}}},{&quot;text&quot;:&quot;New project&quot;,&quot;pageRef&quot;:{&quot;type&quot;:&quot;standard__objectPage&quot;,&quot;attributes&quot;:{&quot;objectApiName&quot;:&quot;pse__Proj__c&quot;,&quot;actionName&quot;:&quot;new&quot;}}},{&quot;text&quot;:&quot;Create project from template&quot;,&quot;pageRef&quot;:{&quot;type&quot;:&quot;standard__navItemPage&quot;,&quot;attributes&quot;:{&quot;apiName&quot;:&quot;pse__Create_Project_From_Template&quot;}}}]},{&quot;icon&quot;:{&quot;namespace&quot;:&quot;pse&quot;,&quot;fileName&quot;:&quot;psa_gantt&quot;},&quot;text&quot;:&quot;Progress&quot;,&quot;items&quot;:[{&quot;text&quot;:&quot;Milestones&quot;,&quot;pageRef&quot;:{&quot;type&quot;:&quot;standard__objectPage&quot;,&quot;attributes&quot;:{&quot;objectApiName&quot;:&quot;pse__Milestone__c&quot;,&quot;actionName&quot;:&quot;home&quot;}}},{&quot;text&quot;:&quot;Project Planner&quot;,&quot;pageRef&quot;:{&quot;type&quot;:&quot;standard__navItemPage&quot;,&quot;attributes&quot;:{&quot;apiName&quot;:&quot;pse__Project_Planner&quot;}}}]},{&quot;icon&quot;:{&quot;namespace&quot;:&quot;pse&quot;,&quot;fileName&quot;:&quot;psa_issues&quot;},&quot;text&quot;:&quot;Issues &amp; Risks&quot;,&quot;items&quot;:[{&quot;text&quot;:&quot;Issues&quot;,&quot;pageRef&quot;:{&quot;type&quot;:&quot;standard__objectPage&quot;,&quot;attributes&quot;:{&quot;objectApiName&quot;:&quot;pse__Issue__c&quot;,&quot;actionName&quot;:&quot;home&quot;}}},{&quot;text&quot;:&quot;New Issue&quot;,&quot;pageRef&quot;:{&quot;type&quot;:&quot;standard__objectPage&quot;,&quot;attributes&quot;:{&quot;objectApiName&quot;:&quot;pse__Issue__c&quot;,&quot;actionName&quot;:&quot;new&quot;}}},{&quot;text&quot;:&quot;Risks&quot;,&quot;pageRef&quot;:{&quot;type&quot;:&quot;standard__objectPage&quot;,&quot;attributes&quot;:{&quot;objectApiName&quot;:&quot;pse__Risk__c&quot;,&quot;actionName&quot;:&quot;home&quot;}}},{&quot;text&quot;:&quot;New Risk&quot;,&quot;pageRef&quot;:{&quot;type&quot;:&quot;standard__objectPage&quot;,&quot;attributes&quot;:{&quot;objectApiName&quot;:&quot;pse__Risk__c&quot;,&quot;actionName&quot;:&quot;new&quot;}}}]},{&quot;icon&quot;:{&quot;namespace&quot;:&quot;pse&quot;,&quot;fileName&quot;:&quot;psa_resourcerequests&quot;},&quot;text&quot;:&quot;Resourcing&quot;,&quot;items&quot;:[{&quot;text&quot;:&quot;Resource Requests&quot;,&quot;pageRef&quot;:{&quot;type&quot;:&quot;standard__objectPage&quot;,&quot;attributes&quot;:{&quot;objectApiName&quot;:&quot;pse__Resource_Request__c&quot;,&quot;actionName&quot;:&quot;home&quot;}}},{&quot;text&quot;:&quot;Assignments&quot;,&quot;pageRef&quot;:{&quot;type&quot;:&quot;standard__objectPage&quot;,&quot;attributes&quot;:{&quot;objectApiName&quot;:&quot;pse__Assignment__c&quot;,&quot;actionName&quot;:&quot;home&quot;}}}]},{&quot;icon&quot;:{&quot;namespace&quot;:&quot;pse&quot;,&quot;fileName&quot;:&quot;psa_timecards&quot;},&quot;text&quot;:&quot;Time &amp; Expense&quot;,&quot;items&quot;:[{&quot;text&quot;:&quot;Time Entry&quot;,&quot;pageRef&quot;:{&quot;type&quot;:&quot;standard__navItemPage&quot;,&quot;attributes&quot;:{&quot;apiName&quot;:&quot;pse__Time_Entry&quot;}}},{&quot;text&quot;:&quot;Missing Timecards&quot;,&quot;pageRef&quot;:{&quot;type&quot;:&quot;standard__objectPage&quot;,&quot;attributes&quot;:{&quot;objectApiName&quot;:&quot;pse__Missing_Timecard__c&quot;,&quot;actionName&quot;:&quot;home&quot;}}},{&quot;text&quot;:&quot;Approve Multiple Timecards&quot;,&quot;pageRef&quot;:{&quot;type&quot;:&quot;standard__navItemPage&quot;,&quot;attributes&quot;:{&quot;apiName&quot;:&quot;pse__Approve_Multiple_Timecards&quot;}}},{&quot;text&quot;:&quot;Expense Reports&quot;,&quot;pageRef&quot;:{&quot;type&quot;:&quot;standard__objectPage&quot;,&quot;attributes&quot;:{&quot;objectApiName&quot;:&quot;pse__Expense_Report__c&quot;,&quot;actionName&quot;:&quot;home&quot;}}},{&quot;text&quot;:&quot;Multiple Expense Entry UI&quot;,&quot;pageRef&quot;:{&quot;type&quot;:&quot;standard__navItemPage&quot;,&quot;attributes&quot;:{&quot;apiName&quot;:&quot;pse__Multiple_Expense_Entry_UI&quot;}}},{&quot;text&quot;:&quot;Approve Multiple Expense Reports&quot;,&quot;pageRef&quot;:{&quot;type&quot;:&quot;standard__navItemPage&quot;,&quot;attributes&quot;:{&quot;apiName&quot;:&quot;pse__Approve_Multiple_Expense_Reports&quot;}}}]}]},{&quot;text&quot;:&quot;Processes &amp; Flows&quot;,&quot;items&quot;:[{&quot;text&quot;:&quot;Create Project from Opportunity&quot;,&quot;pageRef&quot;:{&quot;type&quot;:&quot;standard__webPage&quot;,&quot;attributes&quot;:{&quot;url&quot;:&quot;/lightning/cmp/psaws__bpmOptyToSrvcProj&quot;}}}]}]</value>
+    </values>
+    <values>
+        <field>fferpcore__SObjectField__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>fferpcore__SObjectType__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>fferpcore__SmallData__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

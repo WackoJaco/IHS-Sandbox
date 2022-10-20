@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ffps_ihs__BatchEmail__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Email address to send batch email completion to, if none populated then none sent.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Email address to send batch email completion to, if none populated then none sent.</inlineHelpText>
+    <label>Batch Email</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

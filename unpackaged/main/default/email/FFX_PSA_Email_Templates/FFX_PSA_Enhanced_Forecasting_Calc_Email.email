@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[A Forecast Calculation has been created and completed.<div><br></div><div>Calc Name:&nbsp;{!pse__Forecast_Enhanced_Calculation__c.Name}</div><div>Link:&nbsp;{!pse__Forecast_Enhanced_Calculation__c.Link}</div><div><br></div><div>For.....</div><div><br></div><div>Region:&nbsp;{!pse__Forecast_Enhanced_Calculation__c.pse__Region__c}</div><div>Practice:&nbsp;{!pse__Forecast_Enhanced_Calculation__c.pse__Practice__c}</div><div>Group:&nbsp;{!pse__Forecast_Enhanced_Calculation__c.pse__Group__c}</div><div><br></div><div>Time Period:&nbsp;{!pse__Forecast_Enhanced_Calculation__c.pse__Time_Period__c}</div><div><br></div>]]></td>
+</tr>
+</table>

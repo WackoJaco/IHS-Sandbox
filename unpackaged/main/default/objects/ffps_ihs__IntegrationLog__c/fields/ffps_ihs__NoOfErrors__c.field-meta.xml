@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ffps_ihs__NoOfErrors__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <label>No Of Errors</label>
+    <summaryFilterItems>
+        <field>ffps_ihs__IntegrationLogLine__c.ffps_ihs__LineType__c</field>
+        <operation>equals</operation>
+        <value>Error</value>
+    </summaryFilterItems>
+    <summaryForeignKey>ffps_ihs__IntegrationLogLine__c.ffps_ihs__IntegrationLog__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Probability_25_to_50_Check</fullName>
+    <active>false</active>
+    <description>User can only select Qualified, Preferred Vendor if Probability is currently 25%</description>
+    <errorConditionFormula>AND(
+   ISPICKVAL( Pipeline_Stage__c, "Qualified, Preferred vendor"), 
+   NOT(ISPICKVAL(PRIORVALUE(Pipeline_Stage__c) , "Early Stage, Not qualified"))
+    )</errorConditionFormula>
+    <errorDisplayField>Pipeline_Stage__c</errorDisplayField>
+    <errorMessage>The Pipeline Stage can only be updated to 'Qualified, Preferred Vendor' from the 'Early Stage, Not qualified" value. Please review the Pipeline stage for this project and save again once corrected.</errorMessage>
+</ValidationRule>

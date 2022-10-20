@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>FFX_Letterhead</letterhead>
+    <name>PSA Saved Timecards</name>
+    <style>freeForm</style>
+    <subject>Please submit your timecards for {!pse__Timecard_Header__c.pse__Project__c}</subject>
+    <textOnly>Hi {!pse__Timecard_Header__c.pse__Resource__c}
+
+Please submit your timecards for project:
+{!pse__Timecard_Header__c.pse__Project__c}
+
+Contact {!pse__Timecard_Header__c.pse__Approver__c} if you have any questions</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

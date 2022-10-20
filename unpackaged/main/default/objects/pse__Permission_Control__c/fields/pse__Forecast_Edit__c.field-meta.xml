@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>pse__Forecast_Edit__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>If selected, provides the user with permissions to adjust revenue forecast version details for specific Regions, Practices, Groups, Projects, and Opportunities.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Allowed to perform editing on the Forecasts page for the Region/Practice/Group</inlineHelpText>
+    <label>Revenue Forecast Version Adjust</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

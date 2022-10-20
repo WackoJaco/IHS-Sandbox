@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_$pse__Resource_Request__c.pse__Resource_Request_Name__c</field>
+    </columns>
+    <columns>
+        <field>FK_$pse__Resource_Request__c.FFX_Resource_Request_Type__c</field>
+    </columns>
+    <columns>
+        <field>FK_$pse__Resource_Request__c.pse__Status__c</field>
+    </columns>
+    <columns>
+        <field>FK_$pse__Resource_Request__c.pse__Staffer_Resource__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>FK_$pse__Resource_Request__c.pse__SOW_Hours__c</field>
+    </columns>
+    <currency>GBP</currency>
+    <description>Report showing all open resources requests by skill.  Forward planning for staffing for Project and Resource Managers. Useful metrics for recruitment.</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CUST_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Open Resource Requests by Skill</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntityCustomEntity$pse__Skill__c$pse__Resource_Skill_Request__c@pse__Resource_Skill_Request__c.pse__Resource_Request__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

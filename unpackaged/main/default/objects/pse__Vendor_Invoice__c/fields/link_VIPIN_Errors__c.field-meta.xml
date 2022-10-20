@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>link_VIPIN_Errors__c</fullName>
+    <description>Details of any errors that occurred during the Foundations messaging process. This field is automatically generated when activating link control. Values are automatically populated during message delivery.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Details of errors that occurred when updating the linked record.</inlineHelpText>
+    <label>Payable Invoice Errors</label>
+    <length>131072</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

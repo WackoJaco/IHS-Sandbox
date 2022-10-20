@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>pse__Allow_Zero_Entry__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>If selected, users are able to save task time records with zero hours. The default value is false.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If selected, when users change the total task hours from a non zero value to zero on the Time Entry page, the timecard value is updated to zero. To use this setting, you must set Task Time Entry Mode to Calculated. The default value is false.</inlineHelpText>
+    <label>Allow Zero Entry</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

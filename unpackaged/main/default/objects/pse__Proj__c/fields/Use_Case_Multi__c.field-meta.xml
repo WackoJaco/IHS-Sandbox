@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Use_Case_Multi__c</fullName>
+    <description>Use Case allowing multiple selections</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Use Case allowing multiple selections</inlineHelpText>
+    <label>Use Case Multi</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Account Master</fullName>
+                <default>false</default>
+                <label>Account Master</label>
+            </value>
+            <value>
+                <fullName>Data Hub</fullName>
+                <default>false</default>
+                <label>Data Hub</label>
+            </value>
+            <value>
+                <fullName>MDM</fullName>
+                <default>false</default>
+                <label>MDM</label>
+            </value>
+            <value>
+                <fullName>Party Master</fullName>
+                <default>false</default>
+                <label>Party Master</label>
+            </value>
+            <value>
+                <fullName>Position Master</fullName>
+                <default>false</default>
+                <label>Position Master</label>
+            </value>
+            <value>
+                <fullName>Price Master</fullName>
+                <default>false</default>
+                <label>Price Master</label>
+            </value>
+            <value>
+                <fullName>Private Assets Master</fullName>
+                <default>false</default>
+                <label>Private Assets Master</label>
+            </value>
+            <value>
+                <fullName>Product Master</fullName>
+                <default>false</default>
+                <label>Product Master</label>
+            </value>
+            <value>
+                <fullName>Security Master</fullName>
+                <default>false</default>
+                <label>Security Master</label>
+            </value>
+            <value>
+                <fullName>Transaction Master</fullName>
+                <default>false</default>
+                <label>Transaction Master</label>
+            </value>
+            <value>
+                <fullName>Front Office</fullName>
+                <default>false</default>
+                <label>Front Office</label>
+            </value>
+            <value>
+                <fullName>Warehouse</fullName>
+                <default>false</default>
+                <label>Warehouse</label>
+            </value>
+            <value>
+                <fullName>Market Share</fullName>
+                <default>false</default>
+                <label>Market Share</label>
+            </value>
+            <value>
+                <fullName>P&amp;I</fullName>
+                <default>false</default>
+                <label>P&amp;I</label>
+            </value>
+            <value>
+                <fullName>Port State Control</fullName>
+                <default>false</default>
+                <label>Port State Control</label>
+            </value>
+            <value>
+                <fullName>SCC</fullName>
+                <default>false</default>
+                <label>SCC</label>
+            </value>
+            <value>
+                <fullName>Document Management</fullName>
+                <default>false</default>
+                <label>Document Management</label>
+            </value>
+            <value>
+                <fullName>Geo Chemical</fullName>
+                <default>false</default>
+                <label>Geo Chemical</label>
+            </value>
+            <value>
+                <fullName>Land and Lease</fullName>
+                <default>false</default>
+                <label>Land and Lease</label>
+            </value>
+            <value>
+                <fullName>Log Management</fullName>
+                <default>false</default>
+                <label>Log Management</label>
+            </value>
+            <value>
+                <fullName>National Data Repository</fullName>
+                <default>false</default>
+                <label>National Data Repository</label>
+            </value>
+            <value>
+                <fullName>Rec-N-Sync</fullName>
+                <default>false</default>
+                <label>Rec-N-Sync</label>
+            </value>
+            <value>
+                <fullName>Reservoir Management</fullName>
+                <default>false</default>
+                <label>Reservoir Management</label>
+            </value>
+            <value>
+                <fullName>Supply Chain Management</fullName>
+                <default>false</default>
+                <label>Supply Chain Management</label>
+            </value>
+            <value>
+                <fullName>Well Master</fullName>
+                <default>false</default>
+                <label>Well Master</label>
+            </value>
+            <value>
+                <fullName>Ad hoc</fullName>
+                <default>true</default>
+                <label>Ad hoc</label>
+            </value>
+            <value>
+                <fullName>Expert Services</fullName>
+                <default>false</default>
+                <label>Expert Services</label>
+            </value>
+            <value>
+                <fullName>MDS</fullName>
+                <default>false</default>
+                <label>MDS</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>6</visibleLines>
+</CustomField>

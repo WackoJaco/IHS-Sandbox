@@ -1,0 +1,13 @@
+Hi {!pse__Expense_Report__c.pse__Resource__c}
+<BR><BR>
+Your Expense Report has been Approved for: 
+<BR><BR>
+Project: {!pse__Expense_Report__c.pse__Project__c} <BR>
+First Expense Date: {!pse__Expense_Report__c.pse__First_Expense_Date__c} <BR>
+Last Expense Date: {!pse__Expense_Report__c.pse__Last_Expense_Date__c} <BR>
+Assignment: {!pse__Expense_Report__c.pse__Assignment__c} <BR>
+Milestone: {!pse__Expense_Report__c.pse__Milestone__c} <BR>
+Notes: {!pse__Expense_Report__c.pse__Audit_Notes__c} <BR>
+Total Reimbursement Amount: {!pse__Expense_Report__c.pse__Total_Reimbursement_Amount__c} <BR><BR>
+
+Expense Report Link : {!pse__Expense_Report__c.Link}

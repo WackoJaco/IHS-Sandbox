@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Resource Management Workspace</label>
+    <protected>false</protected>
+    <values>
+        <field>fferpcore__Enabled__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>fferpcore__ItemKey__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>fferpcore__ItemType__c</field>
+        <value xsi:type="xsd:string">fferpcore__exp_navigationPane</value>
+    </values>
+    <values>
+        <field>fferpcore__LargeData__c</field>
+        <value xsi:type="xsd:string">[{&quot;text&quot;:&quot;Frequent Tasks&quot;,&quot;items&quot;:[{&quot;icon&quot;:{&quot;namespace&quot;:&quot;psaws&quot;,&quot;fileName&quot;:&quot;rmw_tab_icon&quot;},&quot;text&quot;:&quot;Contacts&quot;,&quot;items&quot;:[{&quot;text&quot;:&quot;Contacts&quot;,&quot;pageRef&quot;:{&quot;type&quot;:&quot;standard__objectPage&quot;,&quot;attributes&quot;:{&quot;objectApiName&quot;:&quot;Contact&quot;,&quot;actionName&quot;:&quot;home&quot;}}},{&quot;text&quot;:&quot;New Contact&quot;,&quot;pageRef&quot;:{&quot;type&quot;:&quot;standard__objectPage&quot;,&quot;attributes&quot;:{&quot;objectApiName&quot;:&quot;Contact&quot;,&quot;actionName&quot;:&quot;new&quot;}}}]},{&quot;icon&quot;:{&quot;namespace&quot;:&quot;pse&quot;,&quot;fileName&quot;:&quot;psa_resourcerequests&quot;},&quot;text&quot;:&quot;Resource Requests&quot;,&quot;items&quot;:[{&quot;text&quot;:&quot;Resource Requests&quot;,&quot;pageRef&quot;:{&quot;type&quot;:&quot;standard__objectPage&quot;,&quot;attributes&quot;:{&quot;objectApiName&quot;:&quot;pse__Resource_Request__c&quot;,&quot;actionName&quot;:&quot;home&quot;}}},{&quot;text&quot;:&quot;New Resource Request&quot;,&quot;pageRef&quot;:{&quot;type&quot;:&quot;standard__objectPage&quot;,&quot;attributes&quot;:{&quot;objectApiName&quot;:&quot;pse__Resource_Request__c&quot;,&quot;actionName&quot;:&quot;new&quot;}}}]},{&quot;icon&quot;:{&quot;namespace&quot;:&quot;pse&quot;,&quot;fileName&quot;:&quot;psa_assignments&quot;},&quot;text&quot;:&quot;Assignments&quot;,&quot;items&quot;:[{&quot;text&quot;:&quot;Assignments&quot;,&quot;pageRef&quot;:{&quot;type&quot;:&quot;standard__objectPage&quot;,&quot;attributes&quot;:{&quot;objectApiName&quot;:&quot;pse__Assignment__c&quot;,&quot;actionName&quot;:&quot;home&quot;}}},{&quot;text&quot;:&quot;New Assignment&quot;,&quot;pageRef&quot;:{&quot;type&quot;:&quot;standard__objectPage&quot;,&quot;attributes&quot;:{&quot;objectApiName&quot;:&quot;pse__Assignment__c&quot;,&quot;actionName&quot;:&quot;new&quot;}}}]},{&quot;icon&quot;:{&quot;namespace&quot;:&quot;pse&quot;,&quot;fileName&quot;:&quot;psa_skills&quot;},&quot;text&quot;:&quot;Skills&quot;,&quot;items&quot;:[{&quot;text&quot;:&quot;Skills Capacity&quot;,&quot;pageRef&quot;:{&quot;type&quot;:&quot;standard__navItemPage&quot;,&quot;attributes&quot;:{&quot;apiName&quot;:&quot;pse__Skills_Capacity&quot;}}},{&quot;text&quot;:&quot;Skills Matrix&quot;,&quot;pageRef&quot;:{&quot;type&quot;:&quot;standard__navItemPage&quot;,&quot;attributes&quot;:{&quot;apiName&quot;:&quot;pse__Skills_and_Certifications_Matrix&quot;}}},{&quot;text&quot;:&quot;Skills and Certifications&quot;,&quot;pageRef&quot;:{&quot;type&quot;:&quot;standard__objectPage&quot;,&quot;attributes&quot;:{&quot;objectApiName&quot;:&quot;pse__Skill__c&quot;,&quot;actionName&quot;:&quot;home&quot;}}}]},{&quot;icon&quot;:{&quot;namespace&quot;:&quot;pse&quot;,&quot;fileName&quot;:&quot;psa_planners&quot;},&quot;text&quot;:&quot;Planners&quot;,&quot;items&quot;:[{&quot;text&quot;:&quot;Resource Planner&quot;,&quot;pageRef&quot;:{&quot;type&quot;:&quot;standard__navItemPage&quot;,&quot;attributes&quot;:{&quot;apiName&quot;:&quot;pse__Resource_Planner&quot;}}},{&quot;text&quot;:&quot;Project Planner&quot;,&quot;pageRef&quot;:{&quot;type&quot;:&quot;standard__navItemPage&quot;,&quot;attributes&quot;:{&quot;apiName&quot;:&quot;pse__Project_Planner&quot;}}}]},{&quot;icon&quot;:{&quot;namespace&quot;:&quot;pse&quot;,&quot;fileName&quot;:&quot;psa_project&quot;},&quot;text&quot;:&quot;Projects&quot;,&quot;items&quot;:[{&quot;text&quot;:&quot;Projects&quot;,&quot;pageRef&quot;:{&quot;type&quot;:&quot;standard__objectPage&quot;,&quot;attributes&quot;:{&quot;objectApiName&quot;:&quot;pse__Proj__c&quot;,&quot;actionName&quot;:&quot;home&quot;}}}]}]}]</value>
+    </values>
+    <values>
+        <field>fferpcore__SObjectField__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>fferpcore__SObjectType__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>fferpcore__SmallData__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

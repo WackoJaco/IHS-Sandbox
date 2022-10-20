@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ffps_ihs__ControlRefreshInterval__c</fullName>
+    <defaultValue>10</defaultValue>
+    <deprecated>false</deprecated>
+    <description>Delay between refreshes of integration control (in seconds).</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Delay between refreshes of integration control (in seconds).</inlineHelpText>
+    <label>Control Refresh Interval</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

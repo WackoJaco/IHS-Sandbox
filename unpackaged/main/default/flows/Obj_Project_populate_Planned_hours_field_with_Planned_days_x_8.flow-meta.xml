@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>51.0</apiVersion>
+    <assignments>
+        <description>Planned days x 8</description>
+        <name>Planned_days_x_8</name>
+        <label>Planned days x 8</label>
+        <locationX>14</locationX>
+        <locationY>422</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.pse__Planned_Hours__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Planneddaysx8</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>Prev_value_is_Changed</name>
+        <label>Prev value is Changed</label>
+        <locationX>170</locationX>
+        <locationY>338</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Planned_Days__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record__Prior.Planned_Days__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Planned_days_x_8</targetReference>
+            </connector>
+            <label>yes</label>
+        </rules>
+        <rules>
+            <name>No</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Planned_Days__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record__Prior.Planned_Days__c</elementReference>
+                </rightValue>
+            </conditions>
+            <label>No</label>
+        </rules>
+    </decisions>
+    <description>Obj:Project populate Planned hours field with Planned days x 8</description>
+    <formulas>
+        <description>Planneddaysx8</description>
+        <name>Planneddaysx8</name>
+        <dataType>Number</dataType>
+        <expression>{!$Record.Planned_Days__c} * 8</expression>
+        <scale>0</scale>
+    </formulas>
+    <interviewLabel>Obj:Project populate Planned hours field with Planned days x 8 {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Obj:Project populate Planned hours field with Planned days x 8</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Prev_value_is_Changed</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Planned_Days__c</field>
+            <operator>GreaterThan</operator>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </filters>
+        <object>pse__Proj__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>

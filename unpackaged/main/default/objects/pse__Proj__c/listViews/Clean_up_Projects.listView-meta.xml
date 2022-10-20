@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Clean_up_Projects</fullName>
+    <columns>pse__Project_ID__c</columns>
+    <columns>pse__Project_Manager__c</columns>
+    <columns>NAME</columns>
+    <columns>psa_Engagement_Type__c</columns>
+    <columns>Use_Case__c</columns>
+    <columns>pse__Project_Type__c</columns>
+    <columns>pse__Region__c</columns>
+    <columns>pse__Is_Active__c</columns>
+    <columns>pse__Billing_Type__c</columns>
+    <columns>Director__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>CREATEDBY_USER.ALIAS</columns>
+    <columns>pse__Include_In_Forecasting__c</columns>
+    <columns>pse__Recognition_Method__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>pse__Include_In_Forecasting__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>pse__Proj__c.Pipeline</value>
+    </filters>
+    <label>Clean up Projects</label>
+</ListView>

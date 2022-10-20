@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ffirule__VisualForce__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>'&lt;apex:page standardController="' + ffirule__IntegrationRule__r.ffirule__SourceObject__c + '" extensions="ffirule.IntegrationRuleEngine" docType="html-5.0" standardStylesheets="false" showheader="false" sidebar="false"&gt;'+ BR() +
+'&lt;apex:variable var="sourceId" value="' + '{' + '!' + ffirule__IntegrationRule__r.ffirule__SourceObject__c + '.Id}"/&gt;' + BR()
+ +'&lt;ffirule:IntegrationRule engine="'+'{'+'!'+'engine'+'}'+'" actionName="' + ffirule__ActionName__c + '"  sourceId="'+'{'+'!'+'sourceId'+'}'+'"/&gt;'+ BR() + '&lt;/apex:page&gt;'</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>VisualForce</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

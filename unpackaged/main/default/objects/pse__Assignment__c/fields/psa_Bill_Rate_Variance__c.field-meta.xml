@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>psa_Bill_Rate_Variance__c</fullName>
+    <externalId>false</externalId>
+    <formula>(pse__Bill_Rate__c - pse__Suggested_Bill_Rate_Number__c) /  pse__Suggested_Bill_Rate_Number__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Displays the variance between the Bill Rate and the Suggested Bill Rate values.</inlineHelpText>
+    <label>Bill Rate Variance %</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

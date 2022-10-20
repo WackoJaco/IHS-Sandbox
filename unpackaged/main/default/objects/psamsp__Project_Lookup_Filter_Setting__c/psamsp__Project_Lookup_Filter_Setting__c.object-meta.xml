@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Custom setting to set Region filter for MS Project Import Project Lookup.</description>
+    <enableFeeds>false</enableFeeds>
+    <label>Project Lookup Filter Setting</label>
+    <visibility>Public</visibility>
+</CustomObject>

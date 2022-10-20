@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ffps_ihs__IncludeRecords__c</fullName>
+    <defaultValue>true</defaultValue>
+    <deprecated>false</deprecated>
+    <description>Set to include content of lists.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Set to include content of lists.</inlineHelpText>
+    <label>Include Records</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

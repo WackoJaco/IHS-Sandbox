@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Time and Expense Workspace</label>
+    <protected>false</protected>
+    <values>
+        <field>fferpcore__Enabled__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>fferpcore__ItemKey__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>fferpcore__ItemType__c</field>
+        <value xsi:type="xsd:string">fferpcore__exp_navigationPane</value>
+    </values>
+    <values>
+        <field>fferpcore__LargeData__c</field>
+        <value xsi:type="xsd:string">[{&quot;text&quot;:&quot;Frequent Tasks&quot;,&quot;items&quot;:[{&quot;icon&quot;:{&quot;namespace&quot;:&quot;pse&quot;,&quot;fileName&quot;:&quot;psa_assignments&quot;},&quot;text&quot;:&quot;Assignments &amp; Tasks&quot;,&quot;items&quot;:[{&quot;text&quot;:&quot;My Assignments&quot;,&quot;pageRef&quot;:{&quot;type&quot;:&quot;standard__objectPage&quot;,&quot;attributes&quot;:{&quot;objectApiName&quot;:&quot;pse__Assignment__c&quot;,&quot;actionName&quot;:&quot;list&quot;},&quot;state&quot;:{&quot;filterName&quot;:&quot;psaws__My_Assignments&quot;}}},{&quot;text&quot;:&quot;My Project Tasks&quot;,&quot;pageRef&quot;:{&quot;type&quot;:&quot;standard__objectPage&quot;,&quot;attributes&quot;:{&quot;objectApiName&quot;:&quot;pse__Project_Task_Assignment__c&quot;,&quot;actionName&quot;:&quot;list&quot;},&quot;state&quot;:{&quot;filterName&quot;:&quot;psaws__My_Task_Assignments&quot;}}}]},{&quot;icon&quot;:{&quot;namespace&quot;:&quot;pse&quot;,&quot;fileName&quot;:&quot;psa_timecards&quot;},&quot;text&quot;:&quot;Time &amp; Expense&quot;,&quot;items&quot;:[{&quot;text&quot;:&quot;Log Timecard&quot;,&quot;pageRef&quot;:{&quot;type&quot;:&quot;standard__navItemPage&quot;,&quot;attributes&quot;:{&quot;apiName&quot;:&quot;pse__Time_Entry&quot;}}},{&quot;text&quot;:&quot;Create Expense Report&quot;,&quot;pageRef&quot;:{&quot;type&quot;:&quot;standard__navItemPage&quot;,&quot;attributes&quot;:{&quot;apiName&quot;:&quot;pse__Multiple_Expense_Entry_UI&quot;}}},{&quot;text&quot;:&quot;My Expense Reports&quot;,&quot;pageRef&quot;:{&quot;type&quot;:&quot;standard__objectPage&quot;,&quot;attributes&quot;:{&quot;objectApiName&quot;:&quot;pse__Expense_Report__c&quot;,&quot;actionName&quot;:&quot;list&quot;},&quot;state&quot;:{&quot;filterName&quot;:&quot;psaws__My_Expense_Reports&quot;}}}]},{&quot;icon&quot;:{&quot;namespace&quot;:&quot;pse&quot;,&quot;fileName&quot;:&quot;psa_skills&quot;},&quot;text&quot;:&quot;Skills &amp; Certifications&quot;,&quot;items&quot;:[{&quot;text&quot;:&quot;Update Skills &amp; Certifications&quot;,&quot;pageRef&quot;:{&quot;type&quot;:&quot;standard__navItemPage&quot;,&quot;attributes&quot;:{&quot;apiName&quot;:&quot;pse__Skills_and_Certifications_Matrix&quot;}}}]}]}]</value>
+    </values>
+    <values>
+        <field>fferpcore__SObjectField__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>fferpcore__SObjectType__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>fferpcore__SmallData__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Create the flow</label>
+    <protected>false</protected>
+    <values>
+        <field>fferpcore__Configuration__c</field>
+        <value xsi:type="xsd:string">{
+				&quot;UpdateSkillsFlow&quot;: {
+					&quot;fullName&quot;: &quot;UpdateSkillsFlow&quot;,
+					&quot;label&quot;: &quot;Update Skills Flow&quot;,
+					&quot;processMetadataValues&quot;: [
+						{
+						&quot;name&quot;: &quot;BuilderType&quot;,
+						&quot;value&quot;: {
+							&quot;stringValue&quot;: &quot;LightningFlowBuilder&quot;
+						}
+						},
+						{
+						&quot;name&quot;: &quot;CanvasMode&quot;,
+						&quot;value&quot;: {
+							&quot;stringValue&quot;: &quot;FREE_FORM_CANVAS&quot;
+						}
+						},
+						{
+						&quot;name&quot;: &quot;OriginBuilderType&quot;,
+						&quot;value&quot;: {
+							&quot;stringValue&quot;: &quot;LightningFlowBuilder&quot;
+						}
+						}
+					],
+					&quot;processType&quot;: &quot;Flow&quot;,
+					&quot;screens&quot;: [{
+						&quot;name&quot;: &quot;ManageSkilsRecommendationScreen&quot;,
+						&quot;label&quot;: &quot;Update Skills Recommendation Screen&quot;,
+						&quot;locationX&quot;: &quot;579&quot;,
+						&quot;locationY&quot;: &quot;425&quot;,
+						&quot;allowBack&quot;: true,
+						&quot;allowFinish&quot;: true,
+						&quot;allowPause&quot;: true,
+						&quot;fields&quot;: [{
+						&quot;name&quot;: &quot;WorkingSkills&quot;,
+						&quot;extensionName&quot;: &quot;pse:rm_manageSkillCertificationsContainer&quot;,
+						&quot;fieldType&quot;: &quot;ComponentInstance&quot;,
+						&quot;isRequired&quot;: true
+						}],
+						&quot;showFooter&quot;: true,
+						&quot;showHeader&quot;: true
+					}],
+					&quot;start&quot;: {
+						&quot;locationX&quot;: &quot;50&quot;,
+						&quot;locationY&quot;: &quot;50&quot;,
+						&quot;connector&quot;: {
+						&quot;targetReference&quot;: &quot;ManageSkilsRecommendationScreen&quot;
+						}
+					},
+					&quot;status&quot;: &quot;Active&quot;
+				}
+			}</value>
+    </values>
+    <values>
+        <field>fferpcore__DisableRevertAction__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>fferpcore__Feature__c</field>
+        <value xsi:type="xsd:string">pse__NbaOutdatedSkills</value>
+    </values>
+    <values>
+        <field>fferpcore__IsOptional__c</field>
+        <value xsi:type="xsd:string">Required</value>
+    </values>
+    <values>
+        <field>fferpcore__StepDescription__c</field>
+        <value xsi:type="xsd:string">pse__feature_console_step_create_flow</value>
+    </values>
+    <values>
+        <field>fferpcore__StepNumber__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>fferpcore__StepType__c</field>
+        <value xsi:type="xsd:string">Flow</value>
+    </values>
+</CustomMetadata>

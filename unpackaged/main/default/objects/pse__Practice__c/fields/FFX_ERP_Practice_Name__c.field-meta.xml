@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FFX_ERP_Practice_Name__c</fullName>
+    <description>Used to create Dimension 2 via ERP Messaging. Name of Record Truncated to 80 Characters.</description>
+    <externalId>false</externalId>
+    <formula>LEFT(Name,80)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Used to create Dimension 2 via ERP Messaging. Name of Record Truncated to 80 Characters.</inlineHelpText>
+    <label>FDN Practice Name</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

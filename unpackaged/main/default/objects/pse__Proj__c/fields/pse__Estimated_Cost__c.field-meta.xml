@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>pse__Estimated_Cost__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The estimated total cost of this estimate.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The estimated total cost of this estimate.</inlineHelpText>
+    <label>Deprecated:Estimated Cost</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>4</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>pse__Percent_Hours_Completed_For_Recognition__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Percentage of hours completed on this milestone, to be used in Revenue Forecasting calculations. When you run a revenue forecast on the project that relates to this milestone, the following calculation is used to work out the value in this field: (Sum of approved timecard hours /Value in Planned Hours field) multiplied by 100.
+        This field is only populated when "% Complete" is displayed in the Recognition Method field, or when you are using the integration with FinancialForce Revenue Management and this milestone looks up to a FinancialForce Revenue Management template of type "% Complete".</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Percentage of hours completed, for Revenue Forecasting calculations using the "% Complete" recognition method. The value is (Sum of approved timecard hours /Value in Planned Hours field) multiplied by 100.</inlineHelpText>
+    <label>% Hours Completed for Recognition</label>
+    <precision>5</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

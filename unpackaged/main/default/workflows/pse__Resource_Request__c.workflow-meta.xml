@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?><Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>FFX_PSA_Alert_PMO_Professional_Services_Operations_New_RR</fullName>
+        <description>PSA Alert PMO/Professional Services Operations - New RR</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>FFX_PMO_Professional_Services_Operations</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>FFX_PSA_Email_Templates/FFX_PSA_Alert_PMO_New_Resource_Request</template>
+    </alerts>
+    <alerts>
+        <fullName>FFX_PSA_Alert_Resource_Named_RR_Held</fullName>
+        <description>PSA Alert Resource - Named RR Held</description>
+        <protected>false</protected>
+        <recipients>
+            <field>pse__Staffer_Resource__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <recipients>
+            <field>Region_Owner_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>Resource_Manager_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>FFX_PSA_Email_Templates/FFX_PSA_Alert_Resource_Named_RR_Held</template>
+    </alerts>
+    <alerts>
+        <fullName>FFX_PSA_EmailAlert_Resource_Project_Owner_that_RR_converted_to_Assignment</fullName>
+        <description>PSA Alert Resource / Project Owner that RR converted to Assignment</description>
+        <protected>false</protected>
+        <recipients>
+            <field>pse__Staffer_Resource__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <recipients>
+            <field>FFX_Project_Owner_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>FFX_PSA_Email_Templates/FFX_PSA_Alert_Resource_Project_Owner_RR_converted_to_Assignment</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>FFX_PSA_RRUpdateCostRatefromSugCostRate</fullName>
+        <field>pse__Average_Cost_Rate_Number__c</field>
+        <formula>pse__Rate_Card__r.pse__Average_Cost_Rate__c</formula>
+        <name>PSA RRUpdateCostRatefromSugCostRate</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FFX_PSA_RR_Bill_Rate_From_Rate_Card</fullName>
+        <field>pse__Requested_Bill_Rate__c</field>
+        <formula>pse__Suggested_Bill_Rate_Number__c</formula>
+        <name>PSA RR Bill Rate From Rate Card</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FFX_PSA_RR_Status_Hold</fullName>
+        <field>pse__Status__c</field>
+        <literalValue>Hold</literalValue>
+        <name>PSA RR Status Hold</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FFX_PSA_RR_Status_Ready_To_Staff</fullName>
+        <field>pse__Status__c</field>
+        <literalValue>Ready to Staff</literalValue>
+        <name>PSA RR Status Ready To Staff</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FFX_PSA_Requested_Bill_Rate_0</fullName>
+        <field>pse__Requested_Bill_Rate__c</field>
+        <formula>0</formula>
+        <name>PSA Requested Bill Rate = 0</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FFX_PSA_Set_Eligible_for_Schedule_Recalc</fullName>
+        <field>pse__Eligible_for_Schedule_Recalculation__c</field>
+        <literalValue>1</literalValue>
+        <name>PSA Set Eligible for Schedule Recalc</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FFX_PSA_Set_RR_Name</fullName>
+        <field>pse__Resource_Request_Name__c</field>
+        <formula>IF( pse__Resource_Held__c = TRUE,Name + " - " + pse__Staffer_Resource__r.FFX_Resource_Name__c + " - " + TEXT(pse__Resource_Role__c) + " - " + TEXT(pse__Status__c),Name + " - " + TEXT(pse__Resource_Role__c) + " - " + TEXT(pse__Status__c))</formula>
+        <name>PSA Set RR Name</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FFX_PSA_Update_Project_Owner_Email</fullName>
+        <field>FFX_Project_Owner_Email__c</field>
+        <formula>pse__Project__r.Owner:User.Email</formula>
+        <name>PSA Update Project Owner Email</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PSA_Clear_SBR</fullName>
+        <field>pse__Suggested_Bill_Rate_Number__c</field>
+        <name>PSA Clear SBR</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PSA_RR_Status_Ready_to_Staff</fullName>
+        <field>pse__Status__c</field>
+        <literalValue>Ready to Staff</literalValue>
+        <name>PSA RR Status Ready to Staff</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PSA_Set_Core_Suggested_Bill_Rate</fullName>
+        <field>pse__Suggested_Bill_Rate_Number__c</field>
+        <formula>VALUE(TEXT( pse__Requested_Bill_Rate__c ))</formula>
+        <name>PSA Set Core Suggested Bill Rate</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PSA_Set_IHS_SBR</fullName>
+        <description>Set the custom suggested bill rate with core SBR</description>
+        <field>psa_Suggested_Bill_Rate_Number__c</field>
+        <formula>pse__Suggested_Bill_Rate_Number__c</formula>
+        <name>PSA Set IHS SBR</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Lost_Billings_Approved_to_TRUE</fullName>
+        <description>Sets the Lost Billings Approved field to TRUE</description>
+        <field>psa_Lost_Billings_Approved__c</field>
+        <literalValue>1</literalValue>
+        <name>Set Lost Billings Approved to TRUE</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Manager_Email</fullName>
+        <field>Resource_Manager_Email__c</field>
+        <formula>pse__Staffer_Resource__r.pse__Salesforce_User__r.Manager.Email</formula>
+        <name>Set Manager Email</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Region_Owner_Email</fullName>
+        <field>Region_Owner_Email__c</field>
+        <formula>pse__Region__r.Owner:User.Email</formula>
+        <name>Set Region Owner Email</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Suggested_Bill_Rate</fullName>
+        <description>Updates Suggested Bill Rate to 0.99</description>
+        <field>pse__Suggested_Bill_Rate_Number__c</field>
+        <formula>1</formula>
+        <name>Set Suggested Bill Rate</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Update</fullName>
+        <description>Update RR Status to Ready to Staff</description>
+        <field>pse__Status__c</field>
+        <literalValue>Ready to Staff</literalValue>
+        <name>Status Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_to_Pending_Approval</fullName>
+        <description>Set Status to Pending Approval</description>
+        <field>pse__Status__c</field>
+        <literalValue>Pending Approval</literalValue>
+        <name>Status to Pending Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Discount_Approved</fullName>
+        <description>Sets the Discount Approved? Checkbox to TRUE</description>
+        <field>psa_Discount_Approved__c</field>
+        <literalValue>1</literalValue>
+        <name>Update Discount Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Lost_Billings_Approved</fullName>
+        <description>Set Lost Billings Approved field back to false</description>
+        <field>psa_Lost_Billings_Approved__c</field>
+        <literalValue>0</literalValue>
+        <name>Update Lost Billings Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_RR_Status</fullName>
+        <field>pse__Status__c</field>
+        <literalValue>Pending Approval</literalValue>
+        <name>Update RR Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Staffer_Approval_Reqd_to_FALSE</fullName>
+        <description>Sets the Staffer Approval Required to FALSE as this criteria is used in a Flow to auto-submit the RR for Approval if Lost Billings Value field is greater than zero.</description>
+        <field>pse__Staffer_Approval_Required__c</field>
+        <literalValue>0</literalValue>
+        <name>Update Staffer Approval Reqd to FALSE</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status</fullName>
+        <field>pse__Status__c</field>
+        <literalValue>Cancelled</literalValue>
+        <name>Update Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_To_Rejected</fullName>
+        <description>Set RR Status to Rejected / Cancelled</description>
+        <field>pse__Status__c</field>
+        <literalValue>Cancelled</literalValue>
+        <name>Update Status To Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>psa_Clear_Bill_Rate</fullName>
+        <field>pse__Requested_Bill_Rate__c</field>
+        <name>Clear Bill Rate</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>psa_Submitted_to_False</fullName>
+        <field>psa_Submitted__c</field>
+        <literalValue>0</literalValue>
+        <name>Submitted to False</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>FFX PSA Resource Held on Resource Request</fullName>
+        <actions>
+            <name>FFX_PSA_RR_Status_Hold</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>FFX_PSA_Set_RR_Name</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>pse__Resource_Request__c.pse__Resource_Held__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <description>Resource Held on Request</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FFX PSA Resource Request Created</fullName>
+        <actions>
+            <name>FFX_PSA_RR_Status_Ready_To_Staff</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>FFX_PSA_Set_Eligible_for_Schedule_Recalc</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Resource Request Defaults</description>
+        <formula>true</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>FFX PSA Resource Request T%26M From Rate Card</fullName>
+        <active>false</active>
+        <description>Set Bill Rate From Rate Card</description>
+        <formula>NOT(ISBLANK(pse__Project__c)) 
+&amp;&amp; NOT(ISPICKVAL(pse__Project__r.pse__Billing_Type__c, 'Fixed Price'))
+&amp;&amp; pse__Requested_Bill_Rate__c = 0</formula>
+        <triggerType>onCreateOnly</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>FFX_PSA_RR_Bill_Rate_From_Rate_Card</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>pse__Resource_Request__c.psa_Time_Delay__c</offsetFromField>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>FFX PSA Resource Unheld on Resource Request</fullName>
+        <actions>
+            <name>PSA_RR_Status_Ready_to_Staff</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Resource Unheld on Request</description>
+        <formula>ISBLANK(pse__Assignment__c)  &amp;&amp;  pse__Resource_Held__c = FALSE</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>FFX PSA Set RR Bill Rate to 0 for Fixed Price Projects</fullName>
+        <actions>
+            <name>FFX_PSA_Requested_Bill_Rate_0</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>0 Bill Rate for Fixed Price Projects</description>
+        <formula>ISPICKVAL(pse__Project__r.pse__Billing_Type__c, 'Fixed Price')</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>FFX PSA Update Project Owner Email</fullName>
+        <actions>
+            <name>FFX_PSA_Update_Project_Owner_Email</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>true</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>PSA - Soft Booking</fullName>
+        <actions>
+            <name>FFX_PSA_Alert_Resource_Named_RR_Held</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>pse__Resource_Request__c.pse__Resource_Held__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>PSA RR Requested Bill Rate Change</fullName>
+        <actions>
+            <name>PSA_Set_Core_Suggested_Bill_Rate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Update IHS SBR and core SBR if RBR changes</description>
+        <formula>AND(
+				 NOT(ISNULL(pse__Requested_Bill_Rate__c) ) 
+				,NULLVALUE(pse__Requested_Bill_Rate__c, 0) &lt;&gt; pse__Rate_Card__r.pse__Suggested_Bill_Rate__c
+				)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>PSA Resource Request - Update Region Owner Email</fullName>
+        <actions>
+            <name>Set_Manager_Email</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Set_Region_Owner_Email</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>true</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>PSA Resource Request T%26M Update Suggested Bill Rate if zero</fullName>
+        <actions>
+            <name>Set_Suggested_Bill_Rate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Sets Suggested Bill Rate to 0.99 if Suggested Rate is zero to activate billing rate variance % for RR approvals</description>
+        <formula>NOT(ISBLANK(pse__Project__c)) &amp;&amp; NOT(ISPICKVAL(pse__Project__r.pse__Billing_Type__c, 'Fixed Price'))  &amp;&amp;  (pse__Suggested_Bill_Rate__c = '0')</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+</Workflow>

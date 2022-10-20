@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Settings used for Financial Statements Reporting.</description>
+    <enableFeeds>false</enableFeeds>
+    <label>Financial Statements Reporting Settings</label>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Estimated_Project_Duration__c</fullName>
+    <externalId>false</externalId>
+    <label>Estimated Project Duration</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Test</fullName>
+                <default>false</default>
+                <label>Test</label>
+            </value>
+            <value>
+                <fullName>0-2 weeks</fullName>
+                <default>false</default>
+                <label>0-2 weeks</label>
+            </value>
+            <value>
+                <fullName>2-4 weeks</fullName>
+                <default>false</default>
+                <label>2-4 weeks</label>
+            </value>
+            <value>
+                <fullName>4-6 weeks</fullName>
+                <default>false</default>
+                <label>4-6 weeks</label>
+            </value>
+            <value>
+                <fullName>2 months</fullName>
+                <default>false</default>
+                <label>2 months</label>
+            </value>
+            <value>
+                <fullName>3 months</fullName>
+                <default>false</default>
+                <label>3 months</label>
+            </value>
+            <value>
+                <fullName>4 months</fullName>
+                <default>false</default>
+                <label>4 months</label>
+            </value>
+            <value>
+                <fullName>5 months</fullName>
+                <default>false</default>
+                <label>5 months</label>
+            </value>
+            <value>
+                <fullName>6 months</fullName>
+                <default>false</default>
+                <label>6 months</label>
+            </value>
+            <value>
+                <fullName>7 months</fullName>
+                <default>false</default>
+                <label>7 months</label>
+            </value>
+            <value>
+                <fullName>8 months</fullName>
+                <default>false</default>
+                <label>8 months</label>
+            </value>
+            <value>
+                <fullName>9 months</fullName>
+                <default>false</default>
+                <label>9 months</label>
+            </value>
+            <value>
+                <fullName>&gt;9 months</fullName>
+                <default>false</default>
+                <label>&gt;9 months</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

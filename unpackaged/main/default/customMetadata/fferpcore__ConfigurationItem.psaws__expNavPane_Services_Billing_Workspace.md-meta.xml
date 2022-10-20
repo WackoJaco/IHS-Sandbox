@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Services Billing Workspace</label>
+    <protected>false</protected>
+    <values>
+        <field>fferpcore__Enabled__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>fferpcore__ItemKey__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>fferpcore__ItemType__c</field>
+        <value xsi:type="xsd:string">fferpcore__exp_navigationPane</value>
+    </values>
+    <values>
+        <field>fferpcore__LargeData__c</field>
+        <value xsi:type="xsd:string">[{&quot;text&quot;:&quot;Frequent Tasks&quot;,&quot;items&quot;:[{&quot;icon&quot;:{&quot;namespace&quot;:&quot;pse&quot;,&quot;fileName&quot;:&quot;psa_billing&quot;},&quot;text&quot;:&quot;Manage Billing Events&quot;,&quot;items&quot;:[{&quot;text&quot;:&quot;Billing Event Generation&quot;,&quot;pageRef&quot;:{&quot;type&quot;:&quot;standard__navItemPage&quot;,&quot;attributes&quot;:{&quot;apiName&quot;:&quot;pse__Billing_Event_Generation&quot;}}},{&quot;text&quot;:&quot;Billing Events Awaiting Release&quot;,&quot;pageRef&quot;:{&quot;type&quot;:&quot;standard__objectPage&quot;,&quot;attributes&quot;:{&quot;objectApiName&quot;:&quot;pse__Billing_Event__c&quot;,&quot;actionName&quot;:&quot;list&quot;},&quot;state&quot;:{&quot;filterName&quot;:&quot;psaws__Billing_Events_Awaiting_Release&quot;}}},{&quot;text&quot;:&quot;Billing Events Not Marked as Invoiced&quot;,&quot;pageRef&quot;:{&quot;type&quot;:&quot;standard__objectPage&quot;,&quot;attributes&quot;:{&quot;objectApiName&quot;:&quot;pse__Billing_Event__c&quot;,&quot;actionName&quot;:&quot;list&quot;},&quot;state&quot;:{&quot;filterName&quot;:&quot;psaws__Billing_Events_Not_Marked_as_Invoiced&quot;}}}]}]}]</value>
+    </values>
+    <values>
+        <field>fferpcore__SObjectField__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>fferpcore__SObjectType__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>fferpcore__SmallData__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

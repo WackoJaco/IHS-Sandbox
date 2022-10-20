@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ffps_ihs__Email_Recipients__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Comma separated list of email address(es) recipients of batch status reports. If blank, the default user email address will be used.</description>
+    <externalId>false</externalId>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <inlineHelpText>Comma separated list of email address(es) recipients of batch status reports. If blank, the default user email address will be used.</inlineHelpText>
+    <label>Email Recipients</label>
+    <length>32768</length>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

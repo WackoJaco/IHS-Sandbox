@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Purchase_Order_Change_Request</fullName>
+    <active>true</active>
+    <label>Customer Purchase Order Change Request</label>
+    <picklistValues>
+        <picklist>Change_Request_Type__c</picklist>
+        <values>
+            <fullName>Client Credit - fee waiver</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fixed Price Overage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non Chargeable client work %28FOC%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Proposal and SOW</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>psa_Requester__c</picklist>
+        <values>
+            <fullName>Client</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IHS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>pse__Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Open</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>pse__Type__c</picklist>
+        <values>
+            <fullName>Customer Purchase Order</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Customer Purchase Order Change Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal Budget</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal Budget Change Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vendor Purchase Order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vendor Purchase Order Change Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Work Order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Work Order Change Request</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

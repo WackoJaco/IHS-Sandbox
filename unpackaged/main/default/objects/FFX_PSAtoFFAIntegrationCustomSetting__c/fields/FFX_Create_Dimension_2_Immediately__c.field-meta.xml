@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FFX_Create_Dimension_2_Immediately__c</fullName>
+    <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
+    <inlineHelpText>When True the Practice to Dimension 2 Message runs immediately. When False runs asynchronously via Message Delivery scheduled job.</inlineHelpText>
+    <label>Create Dimension 2 Immediately</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

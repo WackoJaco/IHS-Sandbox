@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>pse__Timecard__c$pse__Total_Billable_Amount__c</field>
+    </columns>
+    <currency>GBP</currency>
+    <description>Report showing Total Billable Amount from Timecards per month by Region &amp; Project (Current and Previous Quarter) where Billable (Project) is true &amp; Billed = False on Timecard Split
+Matrix Report - Sum Total Billable Amount per month (columns), Grouped by</description>
+    <filter>
+        <criteriaItems>
+            <column>pse__Timecard__c$pse__Project__c.pse__Is_Billable__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>pse__Timecard__c$pse__Total_Billable_Amount__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>GBP 0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>pse__Timecard__c$pse__Billed__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>0</value>
+        </criteriaItems>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Month</dateGranularity>
+        <field>pse__Timecard__c$pse__End_Date__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>pse__Timecard__c$pse__Project__c.pse__Region__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>pse__Timecard__c$pse__Project__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>PSA Unbilled Timecards</name>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>FFX_Timecard_Splits__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>pse__Timecard__c$pse__End_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

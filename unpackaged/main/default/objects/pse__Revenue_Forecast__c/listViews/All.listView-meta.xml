@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>pse__Corp_Actuals__c</columns>
+    <columns>pse__Corp_Revenue_Pending_Recognition__c</columns>
+    <columns>pse__Corp_Revenue_Recognized_To_Date__c</columns>
+    <columns>pse__Corp_Scheduled_Revenue__c</columns>
+    <columns>pse__Corp_Unscheduled_Revenue__c</columns>
+    <columns>pse__Time_Period__c</columns>
+    <columns>pse__Corp_Currency__c</columns>
+    <columns>pse__Project__c</columns>
+    <columns>CURRENCY_ISO_CODE</columns>
+    <columns>pse__Milestone__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>pse__Project__c</field>
+        <operation>contains</operation>
+        <value>EDMREV</value>
+    </filters>
+    <label>All</label>
+</ListView>

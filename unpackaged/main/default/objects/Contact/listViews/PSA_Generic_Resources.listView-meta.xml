@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PSA_Generic_Resources</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>pse__Resource_Role__c</columns>
+    <columns>pse__Is_Resource_Active__c</columns>
+    <columns>pse__Region__c</columns>
+    <columns>pse__Practice__c</columns>
+    <columns>pse__Group__c</columns>
+    <columns>FFX_Generic_Resource__c</columns>
+    <columns>pse__Salesforce_User__c</columns>
+    <columns>pse__Start_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CONTACT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Contact.PSA_Resource</value>
+    </filters>
+    <filters>
+        <field>FFX_Generic_Resource__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>PSA Generic Resources</label>
+</ListView>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Create the strategy</label>
+    <protected>false</protected>
+    <values>
+        <field>fferpcore__Configuration__c</field>
+        <value xsi:type="xsd:string">{
+				&quot;Update_Skills_Strategy&quot;: {
+					&quot;fullName&quot;: &quot;Update_Skills_Strategy&quot;,
+					&quot;label&quot;: &quot;Update Skills Strategy&quot;,
+					&quot;actionContext&quot;: [{
+						&quot;action&quot;: &quot;pse__OutdatedSkills&quot;,
+						&quot;label&quot;: &quot;Outdated Skills&quot;,
+						&quot;name&quot;: &quot;Outdated_Skills&quot;,
+						&quot;type_x&quot;: &quot;apex&quot;
+					}],
+					 &quot;filter&quot;: [{
+                        &quot;childNode&quot;: [&quot;Load_Recommendation&quot;],
+                        &quot;label&quot;: &quot;Outdated Skills Filter&quot;,
+                        &quot;name&quot;: &quot;Outdated_Skills_Filter&quot;,
+                        &quot;expression&quot;: &quot;ISBLANK($Outdated_Skills.output)&quot;
+                    }],
+					&quot;recommendationLoad&quot;: [{
+						&quot;label&quot;: &quot;Load Recommendation&quot;,
+						&quot;name&quot;: &quot;Load_Recommendation&quot;,
+						&quot;condition&quot;: [{
+							&quot;field&quot;: &quot;Name&quot;,
+							&quot;operator&quot;: &quot;EQUALS&quot;,
+							&quot;value&quot;: {
+								&quot;type_x&quot;: &quot;TEXT&quot;,
+								&quot;value&quot;: &quot;Update Skills Recommendation&quot;
+							}
+						}],
+						&quot;conditionLogic&quot;: &quot;and&quot;,
+						&quot;object_x&quot;: &quot;Recommendation&quot;
+					}],
+					&quot;union&quot;: [{
+						&quot;childNode&quot;: [&quot;Outdated_Skills_Filter&quot;],
+						&quot;label&quot;: &quot;Output&quot;,
+						&quot;name&quot;: &quot;Output&quot;
+					}]
+				}
+			}</value>
+    </values>
+    <values>
+        <field>fferpcore__DisableRevertAction__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>fferpcore__Feature__c</field>
+        <value xsi:type="xsd:string">pse__NbaOutdatedSkills</value>
+    </values>
+    <values>
+        <field>fferpcore__IsOptional__c</field>
+        <value xsi:type="xsd:string">Required</value>
+    </values>
+    <values>
+        <field>fferpcore__StepDescription__c</field>
+        <value xsi:type="xsd:string">pse__feature_console_step_create_strategy</value>
+    </values>
+    <values>
+        <field>fferpcore__StepNumber__c</field>
+        <value xsi:type="xsd:double">3.0</value>
+    </values>
+    <values>
+        <field>fferpcore__StepType__c</field>
+        <value xsi:type="xsd:string">Recommendation Strategy</value>
+    </values>
+</CustomMetadata>

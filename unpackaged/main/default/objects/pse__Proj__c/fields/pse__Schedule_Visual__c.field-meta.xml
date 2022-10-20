@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>pse__Schedule_Visual__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Shows whether the project is on schedule, based on the color selected from the corresponding Schedule Status picklist.</description>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL(pse__Schedule_Status__c,"Yellow"),IMAGE("/resource/pse__StatusImages/yellow.png","2-Yellow"),IF(ISPICKVAL(pse__Schedule_Status__c,"Red"),IMAGE("/resource/pse__StatusImages/red.png","3-Red"),IF(ISPICKVAL(pse__Schedule_Status__c,"Green"),IMAGE("/resource/pse__StatusImages/green.png","1-Green"),"")))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Shows whether the project is on schedule, based on the color selected from the corresponding Schedule Status picklist.</inlineHelpText>
+    <label>Schedule Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>FFX_Letterhead</letterhead>
+    <name>PSA Alert PMO - New Resource Request</name>
+    <style>freeForm</style>
+    <subject>New Resource Request</subject>
+    <textOnly>A new scoping resource request has been created.
+
+Resource Request:
+{!pse__Resource_Request__c.pse__Resource_Request_Name__c} - {!pse__Resource_Request__c.Link}
+
+Type: {!pse__Resource_Request__c.FFX_Resource_Request_Type__c}
+
+Requested Hours:
+{!pse__Resource_Request__c.pse__SOW_Hours__c}
+
+Start Date:
+{!pse__Resource_Request__c.pse__Start_Date__c}
+
+End Date:
+{!pse__Resource_Request__c.pse__End_Date__c}
+
+Opportunity:
+{!pse__Resource_Request__c.pse__Opportunity__c}
+
+Project: {!pse__Resource_Request__c.FFX_Project_Name__c}
+
+Please assign a PSA Resource.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

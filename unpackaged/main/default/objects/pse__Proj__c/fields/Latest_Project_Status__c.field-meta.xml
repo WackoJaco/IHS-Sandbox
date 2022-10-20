@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Latest_Project_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Latest Project Status</label>
+    <summarizedField>psa_Project_Status__c.psa_Project_Status_Date__c</summarizedField>
+    <summaryFilterItems>
+        <field>psa_Project_Status__c.psa_Status_Type__c</field>
+        <operation>equals</operation>
+        <value>External</value>
+    </summaryFilterItems>
+    <summaryForeignKey>psa_Project_Status__c.psa_Project__c</summaryForeignKey>
+    <summaryOperation>max</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

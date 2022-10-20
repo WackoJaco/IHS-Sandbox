@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Project_Record_Type_Changing</fullName>
+    <active>true</active>
+    <description>Prevent users from changing the record type without an approved Customer Purchase Order Budget</description>
+    <errorConditionFormula>AND(psa_Customer_PO_Approved__c = FALSE,ISCHANGED( RecordTypeId))</errorConditionFormula>
+    <errorMessage>You cannot change a project record type without an Approved Customer Purchase Order</errorMessage>
+</ValidationRule>

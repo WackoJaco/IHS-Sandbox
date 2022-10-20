@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Global_Projects</fullName>
+    <columns>NAME</columns>
+    <columns>pse__Notes__c</columns>
+    <columns>pse__Region__c</columns>
+    <columns>pse__Practice__c</columns>
+    <columns>pse__Group__c</columns>
+    <columns>pse__Project_Type__c</columns>
+    <columns>pse__Allow_Self_Staffing__c</columns>
+    <columns>pse__Allow_Timecards_Without_Assignment__c</columns>
+    <columns>pse__Time_Credited__c</columns>
+    <columns>pse__Time_Excluded__c</columns>
+    <columns>pse__Work_Calendar__c</columns>
+    <columns>pse__Is_Billable__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>pse__Proj__c.Internal</value>
+    </filters>
+    <filters>
+        <field>pse__Project_Type__c</field>
+        <operation>equals</operation>
+        <value>Absence</value>
+    </filters>
+    <label>All Global Projects</label>
+</ListView>

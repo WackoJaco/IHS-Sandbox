@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>FFX_Letterhead</letterhead>
+    <name>PSA Alert Line Manager and Regional Lead - New Resource Request</name>
+    <style>freeForm</style>
+    <subject>New Resource Request</subject>
+    <textOnly>A new resource request has been created and held against the following Resource
+
+Resource Request:
+{!pse__Resource_Request__c.pse__Resource_Request_Name__c} - {!pse__Resource_Request__c.Link}
+
+Linked Resource
+
+{!pse__Resource_Request__c.pse__Staffer_Resource__c}
+
+Type: {!pse__Resource_Request__c.FFX_Resource_Request_Type__c}
+
+Requested Hours:
+{!pse__Resource_Request__c.pse__SOW_Hours__c}
+
+Start Date:
+{!pse__Resource_Request__c.pse__Start_Date__c}
+
+End Date:
+{!pse__Resource_Request__c.pse__End_Date__c}
+
+Project: {!pse__Resource_Request__c.FFX_Project_Name__c}
+
+Please review the Resource Request</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

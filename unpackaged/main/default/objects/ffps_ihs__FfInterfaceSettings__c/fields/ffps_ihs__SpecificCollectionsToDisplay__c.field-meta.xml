@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ffps_ihs__SpecificCollectionsToDisplay__c</fullName>
+    <deprecated>false</deprecated>
+    <description>When records are being displayed, this comma separated list determines which statements to include the content.  Default is all when blank.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>When records are being displayed, this comma separated list determines which statements to include the content.  Default is all when blank.</inlineHelpText>
+    <label>Specific Collections to Display</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

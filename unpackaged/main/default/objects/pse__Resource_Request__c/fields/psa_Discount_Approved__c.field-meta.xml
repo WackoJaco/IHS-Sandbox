@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>psa_Discount_Approved__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is set if the RR has gone through the automated approval process for discounts and has been approved.</description>
+    <externalId>false</externalId>
+    <label>Discount Approved?</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

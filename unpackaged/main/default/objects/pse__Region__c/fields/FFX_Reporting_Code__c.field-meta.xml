@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FFX_Reporting_Code__c</fullName>
+    <description>Used to create Dimension 1 via ERP Messaging. If this field is populated, this will be used as the Reporting Code on the Dimension 1 record, if not then the Name of the record will be used by default.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Used to create Dimension 1 via ERP Messaging. If this field is populated, this will be used as the Reporting Code on the Dimension 1 record, if not then the Name of the record will be used by default.</inlineHelpText>
+    <label>Reporting Code</label>
+    <length>24</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

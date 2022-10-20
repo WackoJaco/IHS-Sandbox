@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Director_field_required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+  (ISBLANK(Director__c)),
+      RecordType.DeveloperName   &lt;&gt; "Internal"
+)</errorConditionFormula>
+    <errorDisplayField>Director__c</errorDisplayField>
+    <errorMessage>The Director field is Required for Pipeline and Delivery Projects</errorMessage>
+</ValidationRule>

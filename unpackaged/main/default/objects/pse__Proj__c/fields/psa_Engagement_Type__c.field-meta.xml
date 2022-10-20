@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>psa_Engagement_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Engagement Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Phase 1</fullName>
+                <default>false</default>
+                <label>Phase 1</label>
+            </value>
+            <value>
+                <fullName>Phase 2+</fullName>
+                <default>false</default>
+                <label>Phase 2+</label>
+            </value>
+            <value>
+                <fullName>Best Practice Review</fullName>
+                <default>false</default>
+                <label>Best Practice Review</label>
+            </value>
+            <value>
+                <fullName>Ad-hoc Consulting</fullName>
+                <default>false</default>
+                <label>Ad-hoc Consulting</label>
+            </value>
+            <value>
+                <fullName>Staff Augmentation</fullName>
+                <default>false</default>
+                <label>Staff Augmentation</label>
+            </value>
+            <value>
+                <fullName>Advisory</fullName>
+                <default>false</default>
+                <label>Advisory</label>
+            </value>
+            <value>
+                <fullName>Discovery</fullName>
+                <default>false</default>
+                <label>Discovery</label>
+            </value>
+            <value>
+                <fullName>Upgrade Assistance</fullName>
+                <default>false</default>
+                <label>Upgrade Assistance</label>
+            </value>
+            <value>
+                <fullName>Compliance</fullName>
+                <default>false</default>
+                <label>Compliance</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

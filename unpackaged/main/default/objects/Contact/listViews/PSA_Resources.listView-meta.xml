@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PSA_Resources</fullName>
+    <columns>pse__Exclude_From_Time_Calculations__c</columns>
+    <columns>pse__Is_Resource__c</columns>
+    <columns>pse__Is_Resource_Active__c</columns>
+    <columns>FULL_NAME</columns>
+    <columns>pse__Resource_Role__c</columns>
+    <columns>pse__Salesforce_User__c</columns>
+    <columns>CONTACT.CURRENCY_ISO_CODE</columns>
+    <columns>pse__Region__c</columns>
+    <columns>pse__Practice__c</columns>
+    <columns>pse__Group__c</columns>
+    <columns>pse__Start_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CONTACT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Contact.PSA_Resource</value>
+    </filters>
+    <filters>
+        <field>pse__Resource_Role__c</field>
+        <operation>equals</operation>
+        <value>Director</value>
+    </filters>
+    <label>PSA Resources</label>
+</ListView>

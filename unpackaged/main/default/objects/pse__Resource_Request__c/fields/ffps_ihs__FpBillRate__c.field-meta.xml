@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ffps_ihs__FpBillRate__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The custom bill rate for fixed price Projects.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The custom bill rate for fixed price Projects.</inlineHelpText>
+    <label>FP Bill Rate</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>4</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

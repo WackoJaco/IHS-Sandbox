@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>psa_Lost_Billings_Approved__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checkbox is updated once RR is approved - this is checked for auto submitting the RR for approval when the custom fld Lost Billings Value is greater than zero - referenced in Flow relating to RRs.</description>
+    <externalId>false</externalId>
+    <label>Lost Billings Approved?</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

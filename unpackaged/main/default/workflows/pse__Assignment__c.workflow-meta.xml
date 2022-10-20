@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?><Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>FFX_PSA_New_Assignment_EmailAlert</fullName>
+        <description>PSA New Assignment</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Project_Manager_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>FFX_PSA_Email_Templates/FFX_PSA_New_Assignment</template>
+    </alerts>
+    <alerts>
+        <fullName>FFX_PSA_New_Assignment_Resource_EmailAlert</fullName>
+        <description>PSA New Assignment Resource</description>
+        <protected>false</protected>
+        <recipients>
+            <field>pse__Resource__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>FFX_PSA_Email_Templates/FFX_PSA_New_Assignment_Resource</template>
+    </alerts>
+    <alerts>
+        <fullName>FFX_PSA_Project_Closed_for_Expense_Entry_EmailAlert</fullName>
+        <description>PSA Project Closed for Expense Entry</description>
+        <protected>false</protected>
+        <recipients>
+            <field>pse__Resource__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>FFX_PSA_Email_Templates/FFX_PSA_Project_Closed_for_Expense_Entry</template>
+    </alerts>
+    <alerts>
+        <fullName>FFX_PSA_Project_Closed_for_Time_Entry_EmailAlert</fullName>
+        <description>PSA Project Closed for Time Entry</description>
+        <protected>false</protected>
+        <recipients>
+            <field>pse__Resource__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>FFX_PSA_Email_Templates/FFX_PSA_Project_Closed_for_Time_Entry</template>
+    </alerts>
+    <alerts>
+        <fullName>PSA_New_Assignment_Region_Owner</fullName>
+        <description>PSA New Assignment - Region Owner</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Region_Owner_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>FFX_PSA_Email_Templates/FFX_PSA_New_Assignment</template>
+    </alerts>
+    <alerts>
+        <fullName>PSA_New_Assignment_Resource_Manager</fullName>
+        <description>PSA New Assignment - Resource Manager</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Resource_Manager_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>FFX_PSA_Email_Templates/FFX_PSA_New_Assignment</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>A_Set_Region_Owner_Email</fullName>
+        <field>Region_Owner_Email__c</field>
+        <formula>pse__Project__r.pse__Region__r.pse__Region_Head__r.pse__Salesforce_User__r.Email</formula>
+        <name>A Set Region Owner Email</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Discount_Approved_Update</fullName>
+        <field>psa_Discount_Approved__c</field>
+        <literalValue>1</literalValue>
+        <name>Discount Approved Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FFX_PSA_Assignment_Bill_Rate_0</fullName>
+        <field>pse__Bill_Rate__c</field>
+        <formula>0</formula>
+        <name>PSA Assignment Bill Rate 0</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FFX_PSA_Assignment_Billable_True</fullName>
+        <field>pse__Is_Billable__c</field>
+        <literalValue>1</literalValue>
+        <name>PSA Assignment Billable True</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FFX_PSA_Default_Assignment_Name</fullName>
+        <field>Name</field>
+        <formula>LEFT("CHRG-" &amp;  pse__Project__r.psa_Unique_Project_ID__c  &amp; "-" &amp;  pse__Resource__r.Unique_ID__c  &amp; ' - ' &amp; pse__Resource__r.LastName , 80)</formula>
+        <name>PSA Default Assignment Name</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FFX_PSA_Set_Assignment_Status_Scheduled</fullName>
+        <description>Sets Assignment Status to Scheduled</description>
+        <field>pse__Status__c</field>
+        <literalValue>Scheduled</literalValue>
+        <name>PSA Set Assignment Status to Scheduled</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FFX_PSA_Set_Project_Manager_Email</fullName>
+        <field>Project_Manager_Email__c</field>
+        <formula>pse__Project__r.pse__Project_Manager__r.Email</formula>
+        <name>PSA Set Project Manager Email</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FFX_PSA_Update_Average_Cost_Rate</fullName>
+        <field>pse__Cost_Rate_Amount__c</field>
+        <formula>pse__Average_Cost_Rate_Number__c</formula>
+        <name>PSA Update Average Cost Rate</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FFX_PSA_Update_Bill_Rate_Rate_Card</fullName>
+        <field>pse__Bill_Rate__c</field>
+        <formula>IF(NOT(ISNULL(pse__Resource_Request__c))
+			,pse__Resource_Request__r.pse__Requested_Bill_Rate__c
+			,IF(NOT(ISNULL(pse__Rate_Card__c))
+							,pse__Suggested_Bill_Rate_Number__c
+							, pse__Bill_Rate__c))</formula>
+        <name>PSA Update Bill Rate Rate Card</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FFX_PSA_Use_Default_Cost_Rate_False</fullName>
+        <field>pse__Use_Resource_Default_Cost_Rate__c</field>
+        <literalValue>0</literalValue>
+        <name>PSA Use Default Cost Rate False</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PSA_Set_NB_Assignment_Name</fullName>
+        <field>Name</field>
+        <formula>LEFT("NOCHG-" &amp;  pse__Project__r.psa_Unique_Project_ID__c  &amp; "-" &amp;  pse__Resource__r.Unique_ID__c  &amp; ' - ' &amp; pse__Resource__r.LastName , 80)</formula>
+        <name>PSA Set NB Assignment Name</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PSA_Set_ProjectCurrCostRate</fullName>
+        <field>pse__Use_Project_Currency_For_Resource_Cost__c</field>
+        <literalValue>1</literalValue>
+        <name>PSA Set ProjectCurrCostRate</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PSA_Use_Default_Cost_Rate_True</fullName>
+        <field>pse__Use_Resource_Default_Cost_Rate__c</field>
+        <literalValue>1</literalValue>
+        <name>PSA Use Default Cost Rate True</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Bill_Rate</fullName>
+        <description>Set Bill Rate to match Suggested Bill Rate</description>
+        <field>pse__Bill_Rate__c</field>
+        <formula>pse__Suggested_Bill_Rate_Number__c</formula>
+        <name>Set Bill Rate</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Resource_Manager_Email</fullName>
+        <field>Resource_Manager_Email__c</field>
+        <formula>pse__Resource__r.pse__Salesforce_User__r.Manager.Email</formula>
+        <name>Set Resource Manager Email</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_to_Pending_Approval</fullName>
+        <field>pse__Status__c</field>
+        <literalValue>Pending Approval</literalValue>
+        <name>Status to Pending Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_to_Scheduled</fullName>
+        <field>pse__Status__c</field>
+        <literalValue>Scheduled</literalValue>
+        <name>Status to Scheduled</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_to_Tentative</fullName>
+        <field>pse__Status__c</field>
+        <literalValue>Tentative</literalValue>
+        <name>Status to Tentative</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>FFX PSA Assignment 0 Bill Rate Fixed Price</fullName>
+        <actions>
+            <name>FFX_PSA_Assignment_Bill_Rate_0</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>FFX_PSA_Assignment_Billable_True</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>PSA_Set_ProjectCurrCostRate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>PSA_Use_Default_Cost_Rate_True</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Defaults Assignment to Billable with 0 Bill Rate For Fixed Price Projects</description>
+        <formula>AND(
+				pse__Project__r.pse__Is_Billable__c = TRUE, 
+				ISPICKVAL(pse__Project__r.pse__Billing_Type__c, 'Fixed Price'),
+				 psa_DM__c = FALSE)</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>FFX PSA Assignment Creation Defaults</fullName>
+        <actions>
+            <name>FFX_PSA_Default_Assignment_Name</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>FFX_PSA_Set_Assignment_Status_Scheduled</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Defaults on every Assignment Creation</description>
+        <formula>AND(
+				pse__Is_Billable__c = True
+				, psa_DM__c = False)</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>FFX PSA Assignment Set Bill Rate from Rate Card For Non-Fixed Price Projects</fullName>
+        <actions>
+            <name>FFX_PSA_Update_Bill_Rate_Rate_Card</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>PSA_Set_ProjectCurrCostRate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>PSA_Use_Default_Cost_Rate_True</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>PSA Assignment Set Bill Rate from Rate Card For Non-Fixed Price</description>
+        <formula>AND(pse__Project__r.pse__Is_Billable__c = TRUE
+				, OR(ISPICKVAL(pse__Project__r.pse__Billing_Type__c, 'Time and Materials')
+									,ISPICKVAL(pse__Project__r.pse__Billing_Type__c, 'Prepaid T&amp;M / Drawdown')) 
+				, pse__Is_Billable__c
+			 , psa_DM__c = False)</formula>
+        <triggerType>onCreateOnly</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>FFX_PSA_Update_Bill_Rate_Rate_Card</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <actions>
+                <name>PSA_Set_ProjectCurrCostRate</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <actions>
+                <name>PSA_Use_Default_Cost_Rate_True</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>pse__Assignment__c.psa_Time_Delay__c</offsetFromField>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>FFX PSA New Assignment Email Alert</fullName>
+        <actions>
+            <name>FFX_PSA_New_Assignment_EmailAlert</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>FFX_PSA_New_Assignment_Resource_EmailAlert</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>PSA_New_Assignment_Region_Owner</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>PSA_New_Assignment_Resource_Manager</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <formula>true</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>FFX PSA Project Manager Email</fullName>
+        <actions>
+            <name>FFX_PSA_Set_Project_Manager_Email</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>true</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FFX PSA Set Assignment Cost Rate From Rate Card</fullName>
+        <actions>
+            <name>FFX_PSA_Update_Average_Cost_Rate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Sets Assignment Cost Rate From Rate Card</description>
+        <formula>Not(ISBLANK(pse__Rate_Card__c))</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>JJ BACKUP OF WORKDLOW</fullName>
+        <actions>
+            <name>FFX_PSA_Update_Bill_Rate_Rate_Card</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>PSA_Set_ProjectCurrCostRate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>PSA_Use_Default_Cost_Rate_True</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>PSA Assignment Set Bill Rate from Rate Card For Non-Fixed Price</description>
+        <formula>AND(pse__Project__r.pse__Is_Billable__c = TRUE
+				, OR(ISPICKVAL(pse__Project__r.pse__Billing_Type__c, 'Time and Materials')
+									,ISPICKVAL(pse__Project__r.pse__Billing_Type__c, 'Prepaid T&amp;M / Drawdown')) 
+				, pse__Is_Billable__c
+			 , psa_DM__c = False)</formula>
+        <triggerType>onCreateOnly</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>FFX_PSA_Update_Bill_Rate_Rate_Card</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <actions>
+                <name>PSA_Set_ProjectCurrCostRate</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <actions>
+                <name>PSA_Use_Default_Cost_Rate_True</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>pse__Assignment__c.psa_Time_Delay__c</offsetFromField>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Non-Billable PSA Assignment Creation Defaults</fullName>
+        <actions>
+            <name>PSA_Set_NB_Assignment_Name</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>PSA_Use_Default_Cost_Rate_True</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Status_to_Scheduled</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Defaults on every Assignment Creation</description>
+        <formula>pse__Is_Billable__c = False</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>PSA Assignment - Update Region Owner Email</fullName>
+        <actions>
+            <name>A_Set_Region_Owner_Email</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Set_Resource_Manager_Email</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>true</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

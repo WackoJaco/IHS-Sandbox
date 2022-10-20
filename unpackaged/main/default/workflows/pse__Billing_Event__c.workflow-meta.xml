@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?><Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>FFX_PSA_Set_Invoice_Date</fullName>
+        <field>pse__Invoice_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>FFX PSA Set Invoice Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FFX_PSA_Set_Invoiced</fullName>
+        <field>pse__Invoiced__c</field>
+        <literalValue>1</literalValue>
+        <name>FFX PSA Set Invoiced</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>FFX PSA Billing Event Release Email to Finance</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>pse__Billing_Event__c.pse__Is_Released__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <description>Email to Finance when Billing Event is Released</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>FFX PSA Set Invoice details %28ERP%29</fullName>
+        <actions>
+            <name>FFX_PSA_Set_Invoice_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>FFX_PSA_Set_Invoiced</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>(1 OR 2) AND 3</booleanFilter>
+        <criteriaItems>
+            <field>pse__Billing_Event__c.msg_link_BESCN_state__c</field>
+            <operation>equals</operation>
+            <value>Ok</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>pse__Billing_Event__c.msg_link_BESIN_state__c</field>
+            <operation>equals</operation>
+            <value>Ok</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>pse__Billing_Event__c.pse__Invoiced__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

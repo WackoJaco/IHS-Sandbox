@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ffps_ihs__Send_Email_Notification__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>Send Email Notification when Batch Job finishes.</description>
+    <externalId>false</externalId>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <inlineHelpText>Send Email Notification when Batch Job finishes.</inlineHelpText>
+    <label>Send Email Notification</label>
+    <type>Checkbox</type>
+</CustomField>

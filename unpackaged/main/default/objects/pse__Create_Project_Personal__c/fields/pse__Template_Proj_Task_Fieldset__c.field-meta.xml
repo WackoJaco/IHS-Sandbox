@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>pse__Template_Proj_Task_Fieldset__c</fullName>
+    <defaultValue>'CreateProjFromTemplateTasksColumns'</defaultValue>
+    <deprecated>false</deprecated>
+    <description>The API name of a field set used by the Project Task object. This field set defines the project task fields that are editable when creating a project from a template.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>API name of a field set used by the Project Task object. Fields in this field set define the editable fields in the Project Tasks section of the Create Project from Template page.</inlineHelpText>
+    <label>Project Task Editable</label>
+    <length>100</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
